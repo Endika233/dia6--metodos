@@ -392,151 +392,154 @@ namespace dia6__metodos
         //    }
         //}
 
+        //{
+        //    //Modifica el proyecto BootDonalds para que utilice funciones. 
+        //    //Sobre todo, que no haya ningún código repetido, pero también para agrupar código en distintas funcionalidades.
+        //    int option, menuOption, burgerOption, drinkOption;
+        //    string potatosChoice, drinkSizeChoice;
+        //    bool SChoice;
+        //    const int MENU = 1, BURGER = 2, DRINK = 3, EXIT = 4;
+
+        //    string[] menus =//He borrado la opcion burguer porque era igual que esta
+        //    {
+        //        "Grand Big Boot",
+        //        "Big Boot",
+        //        "BootPollo",
+        //        "Cuarto de libra",
+        //        "BootRoyal Deluxe"
+        //    };
+        //    string[] drinks =
+        //    {
+        //        "CocaCola",
+        //        "Fanta",
+        //        "Agua",
+        //        "Cerveza"
+        //    };
+
+        //    Console.WriteLine("¡Bienvenido a BootDonald's!");
+
+        //    do
+        //    {
+        //        Console.WriteLine("¿Qué quieres hacer?");
+        //        Console.WriteLine("1- Pedir menú");
+        //        Console.WriteLine("2- Pedir hamburguesa");
+        //        Console.WriteLine("3- Pedir bebida");
+        //        Console.WriteLine("4- Salir");
+        //        option = Convert.ToInt32(Console.ReadLine());
+
+        //        Console.WriteLine();
+        //        switch (option)
+        //        {
+        //            case MENU:
+        //                Console.WriteLine("Elegir menú");
+        //                MenuBurg(menus);
+        //                menuOption = Convert.ToInt32(Console.ReadLine());
+
+        //                Console.WriteLine("Aquí tienes tu menú " + menus[menuOption - 1]);
+        //                break;
+
+        //            case BURGER:
+        //                Console.WriteLine("Elegir hamburguesa");
+        //                MenuBurg(menus);
+        //                burgerOption = Convert.ToInt32(Console.ReadLine());
+        //                Console.Write("¿Quieres patatas con la hamburguesa? ");
+        //                SChoice = SNCho();
+
+        //                Console.Write("Aquí tienes tu hamburguesa " + menus[burgerOption - 1]);
+        //                if (SChoice)
+        //                {
+        //                    Console.Write(" con ");
+        //                }
+        //                else
+        //                {
+        //                    Console.Write(" sin ");
+        //                }
+        //                Console.WriteLine("patatas");
+
+        //                break;
+
+        //            case DRINK:
+        //                Console.WriteLine("Elegir bebida");
+        //                for (int i = 0; i < drinks.Length; i++)
+        //                {
+        //                    Console.WriteLine((i + 1) + "- " + drinks[i]);
+        //                }
+        //                drinkOption = Convert.ToInt32(Console.ReadLine());
+
+        //                do
+        //                {
+        //                    Console.Write("¿Quieres la bebida grande? (S/N) : ");
+        //                    drinkSizeChoice = Console.ReadLine();
+        //                } while (drinkSizeChoice.ToUpper() != "S" && drinkSizeChoice.ToUpper() != "N");
+
+        //                if (drinkSizeChoice.ToUpper() == "S")
+        //                {
+        //                    largeDrink = true;
+        //                }
+        //                else
+        //                {
+        //                    largeDrink = false;
+        //                }
+
+        //                Console.Write("Aquí tienes tu bebida " + drinks[drinkOption - 1]);
+        //                if (largeDrink)
+        //                {
+        //                    Console.Write(" grande");
+        //                }
+        //                else
+        //                {
+        //                    Console.Write(" mediana");
+        //                }
+
+        //                break;
+
+        //            case EXIT:
+        //                break;
+
+        //            default:
+        //                Console.WriteLine("Opción no disponible. Volver a elegir.");
+        //                break;
+        //        }
+
+        //        // Separamos el menú de opciones al acabar la opción elegida
+        //        Console.WriteLine();
+        //    } while (option != EXIT);
+
+        //}
+        //public static void MenuBurg(string[]menus)
+        //{
+        //    for (int i = 0; i < menus.Length; i++)
+        //    {
+        //        Console.WriteLine((i + 1) + "- " + menus[i]);
+        //    }
+        //}
+        //public static bool SNCho()
+        //{
+        //    int cont=0;
+        //    string choice;
+        //    do
+        //    {
+        //        if (cont > 0)
+        //        {
+        //            Console.WriteLine("Introduzca un valor válido");
+        //        }
+        //        Console.WriteLine("(S/N) : ");
+        //        choice = Console.ReadLine();
+        //        cont = cont + 1;
+
+        //    } while (choice.ToUpper() != "S" && choice.ToUpper() != "N");
+
+        //    if (choice.ToUpper() == "S")
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}////SIN TERMINAR (VAS POR LAS ELECCIONES S Y N DE PATATAS Y EBBEIDAS)
         {
-            //Modifica el proyecto BootDonalds para que utilice funciones. 
-            //Sobre todo, que no haya ningún código repetido, pero también para agrupar código en distintas funcionalidades.
-            int option, menuOption, burgerOption, drinkOption;
-            string potatosChoice, drinkSizeChoice;
-            bool SChoice;
-            const int MENU = 1, BURGER = 2, DRINK = 3, EXIT = 4;
 
-            string[] menus =//He borrado la opcion burguer porque era igual que esta
-            {
-                "Grand Big Boot",
-                "Big Boot",
-                "BootPollo",
-                "Cuarto de libra",
-                "BootRoyal Deluxe"
-            };
-            string[] drinks =
-            {
-                "CocaCola",
-                "Fanta",
-                "Agua",
-                "Cerveza"
-            };
-
-            Console.WriteLine("¡Bienvenido a BootDonald's!");
-
-            do
-            {
-                Console.WriteLine("¿Qué quieres hacer?");
-                Console.WriteLine("1- Pedir menú");
-                Console.WriteLine("2- Pedir hamburguesa");
-                Console.WriteLine("3- Pedir bebida");
-                Console.WriteLine("4- Salir");
-                option = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine();
-                switch (option)
-                {
-                    case MENU:
-                        Console.WriteLine("Elegir menú");
-                        MenuBurg(menus);
-                        menuOption = Convert.ToInt32(Console.ReadLine());
-
-                        Console.WriteLine("Aquí tienes tu menú " + menus[menuOption - 1]);
-                        break;
-
-                    case BURGER:
-                        Console.WriteLine("Elegir hamburguesa");
-                        MenuBurg(menus);
-                        burgerOption = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("¿Quieres patatas con la hamburguesa? ");
-                        SChoice = SNCho();
-
-                        Console.Write("Aquí tienes tu hamburguesa " + menus[burgerOption - 1]);
-                        if (SChoice)
-                        {
-                            Console.Write(" con ");
-                        }
-                        else
-                        {
-                            Console.Write(" sin ");
-                        }
-                        Console.WriteLine("patatas");
-
-                        break;
-
-                    case DRINK:
-                        Console.WriteLine("Elegir bebida");
-                        for (int i = 0; i < drinks.Length; i++)
-                        {
-                            Console.WriteLine((i + 1) + "- " + drinks[i]);
-                        }
-                        drinkOption = Convert.ToInt32(Console.ReadLine());
-
-                        do
-                        {
-                            Console.Write("¿Quieres la bebida grande? (S/N) : ");
-                            drinkSizeChoice = Console.ReadLine();
-                        } while (drinkSizeChoice.ToUpper() != "S" && drinkSizeChoice.ToUpper() != "N");
-
-                        if (drinkSizeChoice.ToUpper() == "S")
-                        {
-                            largeDrink = true;
-                        }
-                        else
-                        {
-                            largeDrink = false;
-                        }
-
-                        Console.Write("Aquí tienes tu bebida " + drinks[drinkOption - 1]);
-                        if (largeDrink)
-                        {
-                            Console.Write(" grande");
-                        }
-                        else
-                        {
-                            Console.Write(" mediana");
-                        }
-
-                        break;
-
-                    case EXIT:
-                        break;
-
-                    default:
-                        Console.WriteLine("Opción no disponible. Volver a elegir.");
-                        break;
-                }
-
-                // Separamos el menú de opciones al acabar la opción elegida
-                Console.WriteLine();
-            } while (option != EXIT);
-
-        }
-        public static void MenuBurg(string[]menus)
-        {
-            for (int i = 0; i < menus.Length; i++)
-            {
-                Console.WriteLine((i + 1) + "- " + menus[i]);
-            }
-        }
-        public static bool SNCho()
-        {
-            int cont=0;
-            string choice;
-            do
-            {
-                if (cont > 0)
-                {
-                    Console.WriteLine("Introduzca un valor válido");
-                }
-                Console.WriteLine("(S/N) : ");
-                choice = Console.ReadLine();
-                cont = cont + 1;
-
-            } while (choice.ToUpper() != "S" && choice.ToUpper() != "N");
-
-            if (choice.ToUpper() == "S")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
         }
     }
 }
