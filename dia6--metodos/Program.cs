@@ -275,9 +275,120 @@ namespace dia6__metodos
 
 
         {
-            //
+            //Modifica el proyecto Contadores para que utilice funciones. Sobre todo, que no haya ningún código repetido, 
+            //pero también para agrupar código en distintas funcionalidades.
+            int option;
+            do
+            {
+                Console.WriteLine("Pulsa 1 para contar normalmente.");
+                Console.WriteLine("Pulsa 2 para contar como un ingeniero de la NASA.");
+                Console.WriteLine("Pulsa 3 para contar como un estudiante universitario.");
+                Console.WriteLine("Pulsa 4 para contar como en barrio sesamo.");
+                Console.WriteLine("Pulsa 5 para contar como un cartero.");
+                Console.WriteLine("Pulsa 6 para salir.");
+                option = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine();
+                int countLimit, cardValue;
+                switch (option)
+                {
+                    case 1:
+                        CountNormally(GetPositiveNumber());
+                        break;
+                    case 2:
+                        CountNasa(GetPositiveNumber());
+                        break;
+                    case 3:
+                        countLimit = GetPositiveNumber();
 
+                        for (int i = 1; i <= countLimit; i++)
+                        {
+                            cardValue = i % 10;
+                            if (cardValue == 1)
+                            {
+                                Console.WriteLine("Ás");
+                            }
+                            else if (cardValue == 8)
+                            {
+                                Console.WriteLine("Sota");
+                            }
+                            else if (cardValue == 9)
+                            {
+                                Console.WriteLine("Caballo");
+                            }
+                            else if (cardValue == 0)
+                            {
+                                Console.WriteLine("Rey");
+                            }
+                            else
+                            {
+                                Console.WriteLine(cardValue);
+                            }
+                        }
+                        break;
+                    case 4:
+                        countLimit = GetPositiveNumber();
+
+                        for (int i = 1; i <= countLimit; i++)
+                        {
+                            Console.WriteLine("¡¡¡¡¡¡¡ " + i + " !!!!!!!");
+                        }
+                        break;
+                    case 5:
+                        countLimit = GetPositiveNumber();
+
+                        for (int i = 1; i <= countLimit; i += 2)
+                        {
+                            Console.WriteLine(i);
+                        }
+                        for (int i = 2; i <= countLimit; i += 2)
+                        {
+                            Console.WriteLine(i);
+                        }
+                        break;
+                    case 6:
+                        break;
+                    default:
+                        Console.WriteLine("Esa opción no existe, elija otra");
+                        Console.WriteLine();
+                        break;
+                }
+             } while (option != 6);
+            Console.WriteLine("ADIOS");
+            Console.ReadLine();
+        }
+    
+
+        public static int GetPositiveNumber()
+        {
+            int countLimit;
+            do
+            {
+                Console.WriteLine("¿Hasta qué número quieres contar (número mayor que 0)?");
+                countLimit = Convert.ToInt32(Console.ReadLine());
+            } while (countLimit <= 0);
+            Console.WriteLine();
+
+            return countLimit;
+        }
+        public static void CountNormally(int countLimit)
+        {
+            for (int i = 1; i <= countLimit; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+        public static void CountNasa(int countLimit)
+        {
+            for (int i = countLimit; i >= 0; i--)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("¡¡¡Ignición!!!");
+        }
+        public static void CountUni(int countLimit)
+        {
 
         }
+
     }
 }
