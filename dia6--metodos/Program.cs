@@ -274,123 +274,269 @@ namespace dia6__metodos
         //}
 
 
+        //{
+        //    //Modifica el proyecto Contadores para que utilice funciones. Sobre todo, que no haya ningún código repetido, 
+        //    //pero también para agrupar código en distintas funcionalidades.
+        //    int option;
+        //    do
+        //    {
+        //        Console.WriteLine("\nPulsa 1 para contar normalmente.");
+        //        Console.WriteLine("Pulsa 2 para contar como un ingeniero de la NASA.");
+        //        Console.WriteLine("Pulsa 3 para contar como un estudiante universitario.");
+        //        Console.WriteLine("Pulsa 4 para contar como en barrio sesamo.");
+        //        Console.WriteLine("Pulsa 5 para contar como un cartero.");
+        //        Console.WriteLine("Pulsa 6 para salir.");
+        //        option = Convert.ToInt32(Console.ReadLine());
+        //        Console.WriteLine();
+        //        switch (option)
+        //        {
+        //            case 1:
+        //                CountNormally(GetPositiveNumber());
+        //                break;
+        //            case 2:
+        //                CountNasa(GetPositiveNumber());
+        //                break;
+        //            case 3:
+        //                CountUni(GetPositiveNumber());
+        //                break;
+        //            case 4:
+        //                CountSesame(GetPositiveNumber()); 
+        //                break;
+        //            case 5:
+        //                CountMail(GetPositiveNumber());
+        //                break;
+        //            case 6:
+        //                break;
+        //            default:
+        //                Console.WriteLine("Esa opción no existe, elija otra");
+        //                Console.WriteLine();
+        //                break;
+        //        }
+        //     } while (option != 6);
+        //    Console.WriteLine("ADIOS");
+        //    Console.ReadLine();
+        //}
+
+
+        //public static int GetPositiveNumber()
+        //{
+        //    int countLimit;
+        //    do
+        //    {
+        //        Console.WriteLine("¿Hasta qué número quieres contar (número mayor que 0)?");
+        //        countLimit = Convert.ToInt32(Console.ReadLine());
+        //    } while (countLimit <= 0);
+        //    Console.WriteLine();
+
+        //    return countLimit;
+        //}
+        //public static void CountNormally(int countLimit)
+        //{
+        //    for (int i = 1; i <= countLimit; i++)
+        //    {
+        //        Console.WriteLine(i);
+        //    }
+        //}
+        //public static void CountNasa(int countLimit)
+        //{
+        //    for (int i = countLimit; i >= 0; i--)
+        //    {
+        //        Console.WriteLine(i);
+        //    }
+        //    Console.WriteLine("¡¡¡Ignición!!!");
+        //}
+        //public static void CountUni(int countLimit)
+        //{
+        //    int cardValue;
+        //    for (int i = 1; i <= countLimit; i++)
+        //    {
+        //        cardValue = i % 10;
+        //        if (cardValue == 1)
+        //        {
+        //            Console.WriteLine("Ás");
+        //        }
+        //        else if (cardValue == 8)
+        //        {
+        //            Console.WriteLine("Sota");
+        //        }
+        //        else if (cardValue == 9)
+        //        {
+        //            Console.WriteLine("Caballo");
+        //        }
+        //        else if (cardValue == 0)
+        //        {
+        //            Console.WriteLine("Rey");
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine(cardValue);
+        //        }
+        //    }
+        //}
+        //public static void CountSesame(int countLimit)
+        //{
+        //    for (int i = 1; i <= countLimit; i++)
+        //    {
+        //        Console.WriteLine("¡¡¡¡¡¡¡ " + i + " !!!!!!!");
+        //    }
+        //}
+        //public static void CountMail(int countLimit)
+        //{
+        //    for (int i = 1; i <= countLimit; i += 2)
+        //    {
+        //        Console.WriteLine(i);
+        //    }
+        //    for (int i = 2; i <= countLimit; i += 2)
+        //    {
+        //        Console.WriteLine(i);
+        //    }
+        //}
+
         {
-            //Modifica el proyecto Contadores para que utilice funciones. Sobre todo, que no haya ningún código repetido, 
-            //pero también para agrupar código en distintas funcionalidades.
-            int option;
+            //Modifica el proyecto BootDonalds para que utilice funciones. 
+            //Sobre todo, que no haya ningún código repetido, pero también para agrupar código en distintas funcionalidades.
+            int option, menuOption, burgerOption, drinkOption;
+            string potatosChoice, drinkSizeChoice;
+            bool SChoice;
+            const int MENU = 1, BURGER = 2, DRINK = 3, EXIT = 4;
+
+            string[] menus =//He borrado la opcion burguer porque era igual que esta
+            {
+                "Grand Big Boot",
+                "Big Boot",
+                "BootPollo",
+                "Cuarto de libra",
+                "BootRoyal Deluxe"
+            };
+            string[] drinks =
+            {
+                "CocaCola",
+                "Fanta",
+                "Agua",
+                "Cerveza"
+            };
+
+            Console.WriteLine("¡Bienvenido a BootDonald's!");
+
             do
             {
-                Console.WriteLine("\nPulsa 1 para contar normalmente.");
-                Console.WriteLine("Pulsa 2 para contar como un ingeniero de la NASA.");
-                Console.WriteLine("Pulsa 3 para contar como un estudiante universitario.");
-                Console.WriteLine("Pulsa 4 para contar como en barrio sesamo.");
-                Console.WriteLine("Pulsa 5 para contar como un cartero.");
-                Console.WriteLine("Pulsa 6 para salir.");
+                Console.WriteLine("¿Qué quieres hacer?");
+                Console.WriteLine("1- Pedir menú");
+                Console.WriteLine("2- Pedir hamburguesa");
+                Console.WriteLine("3- Pedir bebida");
+                Console.WriteLine("4- Salir");
                 option = Convert.ToInt32(Console.ReadLine());
+
                 Console.WriteLine();
                 switch (option)
                 {
-                    case 1:
-                        CountNormally(GetPositiveNumber());
+                    case MENU:
+                        Console.WriteLine("Elegir menú");
+                        MenuBurg(menus);
+                        menuOption = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Aquí tienes tu menú " + menus[menuOption - 1]);
                         break;
-                    case 2:
-                        CountNasa(GetPositiveNumber());
+
+                    case BURGER:
+                        Console.WriteLine("Elegir hamburguesa");
+                        MenuBurg(menus);
+                        burgerOption = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("¿Quieres patatas con la hamburguesa? ");
+                        SChoice = SNCho();
+
+                        Console.Write("Aquí tienes tu hamburguesa " + menus[burgerOption - 1]);
+                        if (SChoice)
+                        {
+                            Console.Write(" con ");
+                        }
+                        else
+                        {
+                            Console.Write(" sin ");
+                        }
+                        Console.WriteLine("patatas");
+
                         break;
-                    case 3:
-                        CountUni(GetPositiveNumber());
+
+                    case DRINK:
+                        Console.WriteLine("Elegir bebida");
+                        for (int i = 0; i < drinks.Length; i++)
+                        {
+                            Console.WriteLine((i + 1) + "- " + drinks[i]);
+                        }
+                        drinkOption = Convert.ToInt32(Console.ReadLine());
+
+                        do
+                        {
+                            Console.Write("¿Quieres la bebida grande? (S/N) : ");
+                            drinkSizeChoice = Console.ReadLine();
+                        } while (drinkSizeChoice.ToUpper() != "S" && drinkSizeChoice.ToUpper() != "N");
+
+                        if (drinkSizeChoice.ToUpper() == "S")
+                        {
+                            largeDrink = true;
+                        }
+                        else
+                        {
+                            largeDrink = false;
+                        }
+
+                        Console.Write("Aquí tienes tu bebida " + drinks[drinkOption - 1]);
+                        if (largeDrink)
+                        {
+                            Console.Write(" grande");
+                        }
+                        else
+                        {
+                            Console.Write(" mediana");
+                        }
+
                         break;
-                    case 4:
-                        CountSesame(GetPositiveNumber()); 
+
+                    case EXIT:
                         break;
-                    case 5:
-                        CountMail(GetPositiveNumber());
-                        break;
-                    case 6:
-                        break;
+
                     default:
-                        Console.WriteLine("Esa opción no existe, elija otra");
-                        Console.WriteLine();
+                        Console.WriteLine("Opción no disponible. Volver a elegir.");
                         break;
                 }
-             } while (option != 6);
-            Console.WriteLine("ADIOS");
-            Console.ReadLine();
-        }
-    
 
-        public static int GetPositiveNumber()
+                // Separamos el menú de opciones al acabar la opción elegida
+                Console.WriteLine();
+            } while (option != EXIT);
+
+        }
+        public static void MenuBurg(string[]menus)
         {
-            int countLimit;
+            for (int i = 0; i < menus.Length; i++)
+            {
+                Console.WriteLine((i + 1) + "- " + menus[i]);
+            }
+        }
+        public static bool SNCho()
+        {
+            int cont=0;
+            string choice;
             do
             {
-                Console.WriteLine("¿Hasta qué número quieres contar (número mayor que 0)?");
-                countLimit = Convert.ToInt32(Console.ReadLine());
-            } while (countLimit <= 0);
-            Console.WriteLine();
+                if (cont > 0)
+                {
+                    Console.WriteLine("Introduzca un valor válido");
+                }
+                Console.WriteLine("(S/N) : ");
+                choice = Console.ReadLine();
+                cont = cont + 1;
 
-            return countLimit;
-        }
-        public static void CountNormally(int countLimit)
-        {
-            for (int i = 1; i <= countLimit; i++)
-            {
-                Console.WriteLine(i);
-            }
-        }
-        public static void CountNasa(int countLimit)
-        {
-            for (int i = countLimit; i >= 0; i--)
-            {
-                Console.WriteLine(i);
-            }
-            Console.WriteLine("¡¡¡Ignición!!!");
-        }
-        public static void CountUni(int countLimit)
-        {
-            int cardValue;
-            for (int i = 1; i <= countLimit; i++)
-            {
-                cardValue = i % 10;
-                if (cardValue == 1)
-                {
-                    Console.WriteLine("Ás");
-                }
-                else if (cardValue == 8)
-                {
-                    Console.WriteLine("Sota");
-                }
-                else if (cardValue == 9)
-                {
-                    Console.WriteLine("Caballo");
-                }
-                else if (cardValue == 0)
-                {
-                    Console.WriteLine("Rey");
-                }
-                else
-                {
-                    Console.WriteLine(cardValue);
-                }
-            }
-        }
-        public static void CountSesame(int countLimit)
-        {
-            for (int i = 1; i <= countLimit; i++)
-            {
-                Console.WriteLine("¡¡¡¡¡¡¡ " + i + " !!!!!!!");
-            }
-        }
-        public static void CountMail(int countLimit)
-        {
-            for (int i = 1; i <= countLimit; i += 2)
-            {
-                Console.WriteLine(i);
-            }
-            for (int i = 2; i <= countLimit; i += 2)
-            {
-                Console.WriteLine(i);
-            }
-        }
+            } while (choice.ToUpper() != "S" && choice.ToUpper() != "N");
 
+            if (choice.ToUpper() == "S")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
