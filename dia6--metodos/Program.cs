@@ -10,6 +10,7 @@ namespace dia6__metodos
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
