@@ -97,9 +97,55 @@ namespace dia6__metodos
         //{
         //    return Math.Pow(ladoCua, 2);
         //}
+        //{
+        //    //Escribe una función que devuelva el resultado de sumar los dos parámetros que le pasamos. 
+        //    //Asigna el valor de llamar a la función en una variable en el programa principal y muestra el resultado en la pantalla
+        //    ////PARTE 2:Usa esos 2 números como parámetros de la función
+        //    ////y después asigna el valor que devuelve la función a una tercera variable en el programa. Finalmente, muestra el valor de la variable en la pantalla.
+
+        //    int num1, num2,sumaNum;
+
+        //    Console.WriteLine("Introduzca los dos números a sumar");
+        //    num1 = Convert.ToInt32(Console.ReadLine());
+        //    num2 = Convert.ToInt32(Console.ReadLine());
+        //    sumaNum = Suma(num1, num2);
+        //    Console.WriteLine("La suma de ambos números es " + sumaNum);
+        //    Console.ReadKey();
+
+        //}
+        //public static int Suma(int num1, int num2)
+        //{
+        //    return num1 + num2;
+        //}
+
+        //{
+        //    //Escribe un programa que pida al usuario dos números. 
+        //    //Usa esos 2 números en una función que divide el primero por el segundo y devuelve el resultado. 
+        //    //Muestra el resultado que devuelve la función en pantalla. 
+        //    //Después vuelve a pedir los números y hacer todo otra vez hasta que el usuario introduzca un 0 como segundo número.
+        //    double num1, num2;
+        //    do
+        //    {
+        //        Console.WriteLine("Introduzca los números a dividir, si desea salir del programa introduza 0 en el segundo número");
+        //        num1 = Convert.ToDouble(Console.ReadLine());
+        //        num2 = Convert.ToDouble(Console.ReadLine());
+        //        if (num2 != 0)
+        //        {
+        //            Console.WriteLine("La división de ambos números es " + div(num1, num2));
+        //        }
+        //    } while (num2 != 0);
+        //    Console.WriteLine("Ha salido del programa");
+        //    Console.ReadKey();
+
+        //}
+        //public static double div(double num1,double num2)
+        //{
+        //    return num1 / num2;
+        //}
+
         {
-            //Escribe una función que devuelva el resultado de sumar los dos parámetros que le pasamos. 
-            //Asigna el valor de llamar a la función en una variable en el programa principal y muestra el resultado en la pantalla
+            //
+
         }
 
     }
