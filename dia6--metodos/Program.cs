@@ -143,10 +143,141 @@ namespace dia6__metodos
         //    return num1 / num2;
         //}
 
+        //{
+        //    //Escribe una función a la que le damos dos números y que devuelva true si el primer núm es + grande que el seg
+        //    //y false en el caso contrario. En el programa principal, pide dos números al usuario, y pasalos a la función. 
+        //    //Muestra en pantalla “El primer número es más grande” o “El primer número no es más grande”.
+        //    int num1, num2;
+        //    Console.WriteLine("Introduzca dos números");
+        //    num1 = Int32.Parse(Console.ReadLine());
+        //    num2 = Int32.Parse(Console.ReadLine());
+        //    if (Max1(num1, num2))//Si es verdadero escribe esto
+        //    {
+        //        Console.WriteLine("El primer número es más grande");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("El primer número no es más grande");
+        //    }
+        //    Console.ReadLine();
+
+
+        //}
+        //public static bool Max1(int num1,int num2)
+        //{
+        //    if(num1>num2)
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
+
+        //{
+        //    //Escribe una función a la que le pasamos un año y devuelve true si es bisiesto. 
+        //    //En el programa principal, pídele al usuario un número y muestra en pantalla “El año … es bisiesto” o 
+        //    //“El año … no es bisiesto” y sigue pidiendo números y diciendo si es o no bisiesto hasta que introduzca un 0.
+        //    int año;
+        //    do
+        //    {
+        //        Console.WriteLine("Introduzca un número de año (0 para salir)");
+        //        año = Int32.Parse(Console.ReadLine());
+        //        if (Bisies(año))
+        //        {
+        //            Console.WriteLine("El año " + año + " es bisiesto");
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("El año " + año + " no es bisiesto");
+        //        }
+
+
+        //    } while (año != 0);
+
+        //}
+        //public static bool Bisies(int año)
+        //{
+        //    if ((año % 4 == 0 && año % 100 != 0) || año % 400 == 0)
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
+
+        //{
+        //    //Escribe una función que reciba un array y lo muestre en pantalla de modo ascendente. 
+        //    //Después escribe otra función que reciba un array y lo muestre en pantalla de modo descendencte.  
+        //    //Crea un array en el programa principal y pásalo a cada una de las funciones.
+
+        //    int[] array = { 0, 1, 2, 3, 4, 5 };
+
+        //    Ascen(array);
+        //    Descen(array);
+        //    Console.ReadLine();
+        //}
+        //public static void Ascen(int[]array)
+        //{
+        //    for(int i = 0; i< array.Length; i++)
+        //    {
+        //        Console.WriteLine(array[i]);
+        //    }
+        //}
+        //public static void Descen(int[]array)
+        //{
+        //    for (int j = (array.Length-1); j >= 0; j--)
+        //    {
+        //        Console.WriteLine(array[j]);
+        //    }
+        //}
+
+
+
+        //{
+        //    //Escriba una función que reciba un array y un valor booleano. 
+        //    //Si el booleano es true, mostrar el array de modo ascendente, si es false, mostrarlo de modo descendente. 
+        //    //En el programa principal, crear un array y hacer que la función lo muestre primero en modo ascendente y después en modo descendente.
+        //    int [] array = {0,1,2,3,4,5};
+        //    bool kuato;
+        //    Console.WriteLine("v bool verdadero, demás falso");
+        //    if (Console.ReadLine() == "v")
+        //    {
+        //        kuato = true;
+        //    }
+        //    else
+        //    {
+        //        kuato = false;
+        //    }
+        //    ArrayBool(array, kuato);
+        //    Console.ReadLine();
+        //}
+        //public static void ArrayBool(int[]array,bool kuato)
+        //{
+        //    if (kuato)
+        //    {
+        //        for (int i = 0; i < array.Length; i++)
+        //        {
+        //            Console.WriteLine(array[i]);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        for (int j = (array.Length - 1); j >= 0; j--)
+        //        {
+        //            Console.WriteLine(array[j]);
+        //        }
+        //    }
+        //}
+
+
         {
             //
 
-        }
 
+        }
     }
 }
