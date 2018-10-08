@@ -280,7 +280,7 @@ namespace dia6__metodos
             int option;
             do
             {
-                Console.WriteLine("Pulsa 1 para contar normalmente.");
+                Console.WriteLine("\nPulsa 1 para contar normalmente.");
                 Console.WriteLine("Pulsa 2 para contar como un ingeniero de la NASA.");
                 Console.WriteLine("Pulsa 3 para contar como un estudiante universitario.");
                 Console.WriteLine("Pulsa 4 para contar como en barrio sesamo.");
@@ -288,7 +288,6 @@ namespace dia6__metodos
                 Console.WriteLine("Pulsa 6 para salir.");
                 option = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
-                int countLimit, cardValue;
                 switch (option)
                 {
                     case 1:
@@ -298,52 +297,13 @@ namespace dia6__metodos
                         CountNasa(GetPositiveNumber());
                         break;
                     case 3:
-                        countLimit = GetPositiveNumber();
-
-                        for (int i = 1; i <= countLimit; i++)
-                        {
-                            cardValue = i % 10;
-                            if (cardValue == 1)
-                            {
-                                Console.WriteLine("Ás");
-                            }
-                            else if (cardValue == 8)
-                            {
-                                Console.WriteLine("Sota");
-                            }
-                            else if (cardValue == 9)
-                            {
-                                Console.WriteLine("Caballo");
-                            }
-                            else if (cardValue == 0)
-                            {
-                                Console.WriteLine("Rey");
-                            }
-                            else
-                            {
-                                Console.WriteLine(cardValue);
-                            }
-                        }
+                        CountUni(GetPositiveNumber());
                         break;
                     case 4:
-                        countLimit = GetPositiveNumber();
-
-                        for (int i = 1; i <= countLimit; i++)
-                        {
-                            Console.WriteLine("¡¡¡¡¡¡¡ " + i + " !!!!!!!");
-                        }
+                        CountSesame(GetPositiveNumber()); 
                         break;
                     case 5:
-                        countLimit = GetPositiveNumber();
-
-                        for (int i = 1; i <= countLimit; i += 2)
-                        {
-                            Console.WriteLine(i);
-                        }
-                        for (int i = 2; i <= countLimit; i += 2)
-                        {
-                            Console.WriteLine(i);
-                        }
+                        CountMail(GetPositiveNumber());
                         break;
                     case 6:
                         break;
@@ -387,7 +347,49 @@ namespace dia6__metodos
         }
         public static void CountUni(int countLimit)
         {
-
+            int cardValue;
+            for (int i = 1; i <= countLimit; i++)
+            {
+                cardValue = i % 10;
+                if (cardValue == 1)
+                {
+                    Console.WriteLine("Ás");
+                }
+                else if (cardValue == 8)
+                {
+                    Console.WriteLine("Sota");
+                }
+                else if (cardValue == 9)
+                {
+                    Console.WriteLine("Caballo");
+                }
+                else if (cardValue == 0)
+                {
+                    Console.WriteLine("Rey");
+                }
+                else
+                {
+                    Console.WriteLine(cardValue);
+                }
+            }
+        }
+        public static void CountSesame(int countLimit)
+        {
+            for (int i = 1; i <= countLimit; i++)
+            {
+                Console.WriteLine("¡¡¡¡¡¡¡ " + i + " !!!!!!!");
+            }
+        }
+        public static void CountMail(int countLimit)
+        {
+            for (int i = 1; i <= countLimit; i += 2)
+            {
+                Console.WriteLine(i);
+            }
+            for (int i = 2; i <= countLimit; i += 2)
+            {
+                Console.WriteLine(i);
+            }
         }
 
     }
