@@ -538,8 +538,77 @@ namespace dia6__metodos
         //        return false;
         //    }
         //}////SIN TERMINAR (VAS POR LAS ELECCIONES S Y N DE PATATAS Y EBBEIDAS)
-        {
 
+        //{
+        //    //Crea una aplicación que nos calcule el factorial de un número pedido por teclado, 
+        //    //lo realizara mediante un método al que le pasamos el número como parámetro. 
+        //    //Para calcular el factorial, se multiplica los números anteriores hasta llegar a uno. 
+        //    //Por ejemplo, si introducimos un 5, realizara esta operación 5*4*3*2*1=120.
+        //    int numFact;
+        //    Console.WriteLine("Introduzca el número a factorizar");
+        //    numFact = Int32.Parse(Console.ReadLine());
+        //    Fact(numFact);
+        //    Console.ReadKey();
+
+        //}
+        //public static void Fact(int numFact)
+        //{
+        //    int fact=1;
+        //    for(int i = 1; i <= numFact; i++)
+        //    {
+        //        fact = i * fact;
+        //    }
+        //    Console.WriteLine("El factor es " + fact);
+        //}
+
+        //{
+        //    //Crea una aplicación que nos cuente el número de cifras de un número entero positivo (validar)pedido por teclado. 
+        //    //Crea un método que realice esta acción, pasando el número por parámetro, devolverá el número de cifras.
+        //    int num;
+        //    Console.WriteLine("Introduce un número positivo");
+        //    num = Int32.Parse(Console.ReadLine());
+        //    Cifras(num);
+        //    Console.ReadLine();
+        //}
+        //public static void Cifras(int num)
+        //{
+        //    int cifras = 0;
+        //    do
+        //    {
+        //        if (num < 0)
+        //        {
+        //            Console.WriteLine("El número introducido es negativo, introduzca uno positivo");
+        //            num = Int32.Parse(Console.ReadLine());
+        //        }
+        //    } while (num < 0);
+        //    do
+        //    {
+        //        num=num / 10;
+        //        cifras++;
+        //    } while (num != 0);
+        //    Console.WriteLine("Ese número tiene "+cifras+" cifras");
+        //}
+
+
+        {
+            //Crea un aplicación que nos convierta una cantidad de euros introducida por teclado a otra moneda, 
+            //estas pueden ser a dolares, yenes o libras. El método tendrá como parámetros, la cantidad de euros y la 
+            //moneda a pasar que sera una cadena, este no devolverá ningún valor, mostrara un mensaje indicando el cambio (void).
+            //0.86 libras es un 1 €, 1.28611 $ es un 1 € ,129.852 yenes es un 1 €
+            string moneda;
+            double euros;
+            Console.WriteLine("Introduzca cuantos euros desea cambiar");
+            euros = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("¿A qué moneda desea cambiarlos? (Escriba libras, dolar o yenes)");
+            moneda = Console.ReadLine().ToUpper();
+            
+        }
+        public static void Cambio(double euros,string moneda)
+        {
+            do
+            {
+
+            } while (moneda!="LIBRAS"||moneda!="DOLAR"||moneda!="YENES");
         }
     }
 }
